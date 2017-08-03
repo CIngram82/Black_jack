@@ -27,8 +27,7 @@ function handValue(hand) {
     if (hand[i] === "A" && blackJackAndHookers > 21)
       blackJackAndHookers -= 10;
   }
-  // console.log(total);
-  // https://www.youtube.com/watch?v=e35AQK014tI
+  console.log("https://www.youtube.com/watch?v=e35AQK014tI");
   return blackJackAndHookers;
 }
 
