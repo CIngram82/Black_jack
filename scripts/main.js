@@ -12,23 +12,23 @@
 
 function handValue(hand) {
   let cardValues = [" ", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"];
-  let total = 0;
+  let blackJackAndHookers = 0;
   let singleCardValue = 0;
   for (var i = 0; i < hand.length; i++) {
     if (hand[i] === "A") {
-      total += 11;
+      blackJackAndHookers += 11;
     } else if (hand[i] === "J" || hand[i] === "Q" || hand[i] === "K") {
-      total += 10;
+      blackJackAndHookers += 10;
     } else {
-      total += cardValues.indexOf(hand[i]);
+      blackJackAndHookers += cardValues.indexOf(hand[i]);
     }
   }
   for (var i = 0; i < hand.length; i++) {
-    if (hand[i] === "A" && total > 21)
-      total -= 10;
+    if (hand[i] === "A" && blackJackAndHookers > 21)
+      blackJackAndHookers -= 10;
   }
   // console.log(total);
-  return total;
+  return blackJackAndHookers;
 }
 
 
