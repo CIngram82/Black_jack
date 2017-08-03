@@ -28,6 +28,7 @@ function handValue(hand) {
       blackJackAndHookers -= 10;
   }
   // console.log(total);
+  // https://www.youtube.com/watch?v=e35AQK014tI
   return blackJackAndHookers;
 }
 
